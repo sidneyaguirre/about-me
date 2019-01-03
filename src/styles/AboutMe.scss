@@ -1,0 +1,189 @@
+/*colors*/
+
+@import './colors.scss';
+.aboutme {
+    width: 100%;
+    height: auto;
+}
+
+.aboutme__profile {
+    width: 100%;
+    height: 500px;
+    display: grid;
+    grid: auto / auto auto;
+    grid-gap: 0px;
+    grid-column-gap: 0px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr 1fr;
+    @media only screen and (max-width: 600px) {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+    }
+}
+
+.aboutme__profile div {
+    text-align: center;
+}
+
+.aboutme__profile--photo {
+    background-color: $section;
+    grid-column: 1;
+    grid-row: 1;
+    display: table-cell;
+    @media only screen and (max-width: 600px) {
+        grid-column: 1;
+        grid-row: 1;
+    }
+}
+
+.aboutme__profile--photo p {
+    color: $main-font;
+    font-size: 15px;
+}
+
+.aboutme__profile--image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-top: 50px;
+    align-self: center;
+    border: 2px solid $main-font;
+    @media only screen and (max-width: 800px) {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+        align-self: center;
+    }
+}
+
+.aboutme__profile--bio {
+    background-color: $section;
+    grid-column: 2;
+    grid-row: 1;
+    color: $main-font;
+    @media only screen and (max-width: 600px) {
+        li {
+            font-size: 15px;
+        }
+        h1 {
+            font-size: 20px;
+        }
+        h3 {
+            font-size: 15px;
+        }
+        grid-column: 1;
+        grid-row: 2;
+    }
+}
+
+.aboutme__profile--socialmedia {
+    width: 100%;
+    height: 50px;
+    background-color: $white;
+    line-height: 1.9;
+    grid-column: 1/3;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid: 50px / 50px 50px 50px 50px;
+    justify-content: center;
+    border-top: 7px solid $secondary;
+    border-bottom: 7px solid $secondary;
+    text-align: center;
+    @media only screen and (max-width: 600px) {
+        grid-column: 1;
+        grid-row: 3;
+    }
+}
+
+.aboutme__profile--socialmedia a {
+    padding: 5px 5px;
+    color: $main-font;
+    font-size: 22px;
+}
+
+
+/* animate icons social media  */
+
+@keyframes shake {
+    0% {
+        -webkit-transform: rotate(-12deg);
+        transform: rotate(-12deg);
+    }
+    8% {
+        -webkit-transform: rotate(12deg);
+        transform: rotate(12deg);
+    }
+    10% {
+        -webkit-transform: rotate(24deg);
+        transform: rotate(24deg);
+    }
+    18% {
+        -webkit-transform: rotate(-24deg);
+        transform: rotate(-24deg);
+    }
+    20% {
+        -webkit-transform: rotate(-24deg);
+        transform: rotate(-24deg);
+    }
+    28% {
+        -webkit-transform: rotate(24deg);
+        transform: rotate(24deg);
+    }
+    30% {
+        -webkit-transform: rotate(24deg);
+        transform: rotate(24deg);
+    }
+    38% {
+        -webkit-transform: rotate(-24deg);
+        transform: rotate(-24deg);
+    }
+    40% {
+        -webkit-transform: rotate(-24deg);
+        transform: rotate(-24deg);
+    }
+    48% {
+        -webkit-transform: rotate(24deg);
+        transform: rotate(24deg);
+    }
+    50% {
+        -webkit-transform: rotate(24deg);
+        transform: rotate(24deg);
+    }
+    58% {
+        -webkit-transform: rotate(-24deg);
+        transform: rotate(-24deg);
+    }
+    60% {
+        -webkit-transform: rotate(-24deg);
+        transform: rotate(-24deg);
+    }
+    68% {
+        -webkit-transform: rotate(24deg);
+        transform: rotate(24deg);
+    }
+    75% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+}
+
+.faa-shake.animated,
+.faa-shake.animated-hover:hover,
+.faa-parent.animated-hover:hover>.faa-shake {
+    animation: shake 2.5s ease infinite;
+    color: $violet;
+}
+
+.faa-shake.animated.faa-fast,
+.faa-shake.animated-hover.faa-fast:hover,
+.faa-parent.animated-hover:hover>.faa-shake.faa-fast {
+    animation: shake 1.2s ease infinite;
+}
+
+.faa-shake.animated.faa-slow,
+.faa-shake.animated-hover.faa-slow:hover,
+.faa-parent.animated-hover:hover>.faa-shake.faa-slow {
+    animation: shake 3.7s ease infinite;
+}
